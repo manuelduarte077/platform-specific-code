@@ -19,7 +19,7 @@ fun HomeScreen(mainViewModel: MainViewModel = hiltViewModel()) {
     verticalArrangement = Arrangement.Center,
     horizontalAlignment = Alignment.CenterHorizontally
   ) {
-    Button(onClick = { }) {
+    Button(onClick = mainViewModel::showSimpleNotification) {
       Text(text = "Simple Notification")
     }
     Spacer(modifier = Modifier.height(12.dp))

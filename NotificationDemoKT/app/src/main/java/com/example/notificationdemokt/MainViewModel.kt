@@ -12,4 +12,8 @@ class MainViewModel @Inject constructor(
   private val notificationManager: NotificationManagerCompat,
 ) : ViewModel() {
 
+  fun showSimpleNotification() {
+    notificationManager.notify(1, notificationBuilder.build())
+  }
+
 }
