@@ -16,4 +16,11 @@ class MainViewModel @Inject constructor(
     notificationManager.notify(1, notificationBuilder.build())
   }
 
+  fun updateSimpleNotification() {
+    notificationManager.notify(2, notificationBuilder.setContentTitle("NEW TITLE").build())
+  }
+
+  fun cancelSimpleNotification() {
+    notificationManager.cancel(1)
+  }
 }

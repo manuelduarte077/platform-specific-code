@@ -5,16 +5,19 @@ import android.app.NotificationManager
 import android.content.Context
 import android.os.Build
 import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationCompat.VISIBILITY_PRIVATE
+import androidx.core.app.NotificationCompat.VISIBILITY_PUBLIC
 import androidx.core.app.NotificationManagerCompat
 import com.example.notificationdemokt.R
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
+import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
 @Module
-@InstallIn(Singleton::class)
+@InstallIn(SingletonComponent::class)
 object NotificationModule {
 
   @Singleton
@@ -28,6 +31,15 @@ object NotificationModule {
       .setContentText("Example Notification")
       .setSmallIcon(R.drawable.ic_stat_name)
       .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+      .setVisibility(VISIBILITY_PRIVATE)
+
+      
+      .setPublicVersion(
+        NotificationCompat.Builder(context, "Main Channel ID")
+          .setContentTitle("Hidden")
+          .setContentText("Unlock to see the message")
+          .build()
+      )
 
   }
 

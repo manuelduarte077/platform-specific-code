@@ -23,11 +23,11 @@ fun HomeScreen(mainViewModel: MainViewModel = hiltViewModel()) {
       Text(text = "Simple Notification")
     }
     Spacer(modifier = Modifier.height(12.dp))
-    Button(onClick = { }) {
+    Button(onClick = mainViewModel::updateSimpleNotification) {
       Text(text = "Update Notification")
     }
     Spacer(modifier = Modifier.height(12.dp))
-    Button(onClick = { }) {
+    Button(onClick = mainViewModel::cancelSimpleNotification) {
       Text(text = "Cancel Notification")
     }
   }
