@@ -23,8 +23,7 @@ fun DetailsScreen(message: String) {
       style = TextStyle(
         fontSize = MaterialTheme.typography.bodyLarge.fontSize,
         fontWeight = FontWeight.Bold,
-
-        )
+      )
     )
   }
 }

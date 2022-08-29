@@ -11,6 +11,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.ViewModel
 import androidx.navigation.NavHostController
 import com.example.notificationdemokt.MainViewModel
+import com.example.notificationdemokt.navigation.Screen
 
 
 @Composable
@@ -30,6 +31,20 @@ fun HomeScreen(mainViewModel: MainViewModel = hiltViewModel(), navController: Na
     Spacer(modifier = Modifier.height(12.dp))
     Button(onClick = mainViewModel::cancelSimpleNotification) {
       Text(text = "Cancel Notification")
+    }
+    Spacer(modifier = Modifier.height(12.dp))
+    Button(onClick = mainViewModel::showProgress) {
+      Text(text = "Progress")
+    }
+    Spacer(modifier = Modifier.height(12.dp))
+    Button(onClick = {
+      navController.navigate(
+        Screen.Details.passArgument(
+          message = "Coming from Main Screen."
+        )
+      )
+    }) {
+      Text(text = "DETAILS SCREEN")
     }
   }
 }
