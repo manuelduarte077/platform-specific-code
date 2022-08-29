@@ -9,11 +9,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.ViewModel
+import androidx.navigation.NavHostController
 import com.example.notificationdemokt.MainViewModel
 
 
 @Composable
-fun HomeScreen(mainViewModel: MainViewModel = hiltViewModel()) {
+fun HomeScreen(mainViewModel: MainViewModel = hiltViewModel(), navController: NavHostController) {
   Column(
     modifier = Modifier.fillMaxSize(),
     verticalArrangement = Arrangement.Center,

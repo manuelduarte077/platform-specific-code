@@ -3,7 +3,8 @@ package com.example.notificationdemokt
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import com.example.notificationdemokt.screens.HomeScreen
+import androidx.navigation.compose.rememberNavController
+import com.example.notificationdemokt.navigation.SetupNavGraph
 import com.example.notificationdemokt.ui.theme.NotificationDemoKTTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -13,7 +14,7 @@ class MainActivity : ComponentActivity() {
     super.onCreate(savedInstanceState)
     setContent {
       NotificationDemoKTTheme {
-        HomeScreen()
+        SetupNavGraph(navController = rememberNavController())
       }
     }
   }
