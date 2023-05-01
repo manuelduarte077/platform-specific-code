@@ -1,0 +1,23 @@
+PODS:
+  - Flutter (1.0.0)
+  - ReachabilitySwift (5.0.0)
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - ReachabilitySwift
+
+SPEC REPOS:
+  trunk:
+    - ReachabilitySwift
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+
+SPEC CHECKSUMS:
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+
+PODFILE CHECKSUM: 04e41541d215cf777776178f1be03f14c079171a
+
+COCOAPODS: 1.12.1
