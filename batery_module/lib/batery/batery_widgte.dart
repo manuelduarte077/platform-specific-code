@@ -34,9 +34,9 @@ class _BateryModuleState extends State<BateryModule> {
   Widget build(BuildContext context) {
     return Center(
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          ElevatedButton(
+          FilledButton(
             onPressed: _getBatteryLevel,
             child: const Text('Get Batery Level'),
           ),
