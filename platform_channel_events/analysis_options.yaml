@@ -1,9 +1,9 @@
 include: package:effective_dart/analysis_options.yaml
 
 analyzer:
-  exclude: 
+  exclude:
     - build/**
-    - lib/**.g.dart  
+    - lib/**.g.dart
   strong-mode:
-    implicit-casts: false
-    implicit-dynamic: false
+    strict-casts: false
+    strict-raw-types: false
